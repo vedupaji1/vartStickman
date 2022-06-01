@@ -1,0 +1,39 @@
+{
+  "name": "VARt Stickman",
+  "version": "1.0.0",
+  "description": "This Is Simple Decentralized App Using Which You Can Create Ethereum Account, And Transfer Ethers.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix client && npm run build --prefix client" 
+  },
+  "keywords": [
+    "VARt ETH",
+    "VARtETH",
+    "VARt World",
+    "VARtWorld",
+    "VARt",
+    "Vedupaji",
+    "Ether",
+    "Ethereum",
+    "Metamask"
+  ],
+  "author": "Vedupaji",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^2.9.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.0",
+    "ethers": "^5.5.3",
+    "express": "^4.17.2",
+    "express-session": "^1.17.2",
+    "http": "^0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.8",
+    "nodemailer": "^6.7.2",
+    "passport": "^0.5.2",
+    "passport-google-oauth20": "^2.0.0",
+    "socket.io": "^4.4.1"
+  }
+}

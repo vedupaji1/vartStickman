@@ -1,0 +1,772 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Balsamiq+Sans&family=Bebas+Neue&family=Inconsolata:wght@500&family=Inter:wght@700&family=Kanit:ital,wght@1,300&family=Mochiy+Pop+One&family=Mulish:ital,wght@0,900;1,900&family=PT+Sans:ital,wght@0,400;1,700&family=Poppins:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Prompt:wght@500&family=Rubik:wght@600&family=Secular+One&family=Source+Sans+Pro&family=Titillium+Web:wght@600;700;900&display=swap');
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #202225;
+}
+
+
+/* Header Component Styling */
+
+.subBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  width: 200vw;
+  height: 200vh;
+  background: radial-gradient(50% 50% at 50% 50%, #fc077d10 0, rgba(255, 255, 255, 0) 100%);
+  transform: translate(-50vw, -100vh);
+  z-index: -1;
+}
+
+.headerMainDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+}
+
+.subHeaderDiv {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  width: 100%;
+  padding: 1.5rem 2rem 1.5rem 2rem;
+  background-color: #04111d;
+}
+
+.headingText,
+.userAccount {
+  padding: 0.5rem;
+  margin-left: 1rem;
+  border-radius: 1rem;
+  width: fit-content;
+  font-family: 'Inter custom', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  align-self: center;
+}
+
+.subHeadingText {
+  cursor: pointer;
+}
+
+.subUserAccount {
+  transition: all 0.2s;
+  color: rgb(233 238 255);
+  cursor: pointer;
+}
+
+.subUserAccount:hover {
+  background-color: rgb(25, 27, 31);
+  color: white;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  background-color: #353840;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  width: fit-content;
+  justify-self: center;
+}
+
+.searchBar svg {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: rgb(138, 147, 155);
+}
+
+.searchBar svg:hover {
+  background-color: #292b32;
+  color: white;
+}
+
+.searchBarInp {
+  width: 50rem;
+  border: none;
+  color: white;
+  background-color: transparent;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1rem;
+  color: rgb(229, 232, 235);
+}
+
+.searchBarInp:focus {
+  outline: none;
+}
+
+.userAccount {
+  font-size: 1.8rem;
+  align-self: center;
+  justify-self: flex-end;
+  margin-right: 1rem;
+  font-weight: 100;
+}
+
+::placeholder {
+  /* For Changing Placeholders Color */
+  color: rgb(138, 147, 155);
+  ;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  /* For Changing Placeholders Color */
+  color: rgb(138, 147, 155);
+  ;
+}
+
+::-ms-input-placeholder {
+  /* For Changing Placeholders Color */
+  color: rgb(138, 147, 155);
+}
+
+/* Dashboard Component Styling */
+
+.mainDashboardDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.subDashboardDiv,
+.ownedNFTShower {
+  display: grid;
+  width: 80%;
+  grid-template-columns: repeat(auto-fill, 35rem);
+  justify-content: center;
+  gap: 3rem 2rem;
+  margin-top: 8rem;
+  margin-bottom: 10rem;
+}
+
+/* NFTShowerCard Component Styling */
+
+.mainCardDiv {
+  width: 35rem;
+  background-color: #303339;
+  border-radius: 1rem;
+  transition: all 0.2s;
+}
+
+.mainCardDiv:hover {
+  transform: scale(1.02);
+}
+
+.imageShower {
+  width: 100%;
+  height: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.imageShower img {
+  width: 100%;
+}
+
+.nftNameAndPriceShower {
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(229, 232, 235);
+  font-size: 1.2rem;
+  letter-spacing: 0.1px;
+  font-weight: 600;
+}
+
+.nftIdShower {
+  margin-right: 0.5rem;
+  color: rgb(138, 147, 155);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.nftIdShower:hover {
+  color: rgb(32, 129, 226);
+  text-decoration: underline;
+}
+
+.priceShower {
+  justify-self: end;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 0.5rem;
+  align-items: center;
+}
+
+.ownerAddressShower {
+  grid-column: 1/3;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: rgb(138, 147, 155);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.ownerAddressShower:hover {
+  color: rgb(229, 232, 235);
+}
+
+.buyNFTShower {
+  padding: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.1px;
+  font-weight: 600;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background: linear-gradient(rgba(21, 27, 34, 0.392) 0%, rgb(48, 51, 57) 15%);
+  cursor: pointer;
+  color: rgb(32, 129, 226);
+  transition: all 0.2s;
+  padding-bottom: 1.2rem;
+}
+
+.buyNFTShower:hover {
+  background: linear-gradient(rgba(21, 27, 34, 0.392) 0%, rgb(48, 51, 57) 20%);
+}
+
+
+/* UserDataShower Component Styling */
+
+.mainUserDataShowerDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subUserDataShowerDiv {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tempBackground {
+  width: 100%;
+  height: 30rem;
+  background-color: #04111d;
+  border-bottom: 0.2rem solid #404040;
+}
+
+.profileShower {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -10rem;
+}
+
+.profileShower img,
+.tempProfileDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 5rem;
+  width: 23rem;
+  background-color: #04111d;
+  height: 23rem;
+  border: 0.2rem solid #404040;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 2rem;
+}
+
+.mintNFTButton {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.1px;
+  font-weight: 600;
+  cursor: pointer;
+  color: rgb(32, 129, 226);
+  transition: all 0.2s;
+  margin-top: 4rem;
+}
+
+.mintNFTButton:hover {
+  text-decoration: underline;
+}
+
+.profileShower span {
+  width: fit-content;
+}
+
+.userAddressShower {
+  margin-top: 1rem;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(138, 147, 155);
+  font-size: 1.4rem;
+  letter-spacing: 0.1px;
+  font-weight: 600;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.userAddressShower:hover {
+  color: rgb(229, 232, 235);
+}
+
+.ownedNFTShower {
+  /* Check Dashboard Styling Section Of This File*/
+}
+
+#listNFTButton {
+  display: grid;
+  grid-template-columns: 3rem auto;
+}
+
+.listNFTShower {
+  width: fit-content;
+}
+
+.listNFTShower:hover {
+  text-decoration: underline;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input:focus {
+  outline: none;
+}
+
+#nftPriceTaker {
+  background-color: #303339;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(138, 147, 155);
+  font-size: 1.2rem;
+  letter-spacing: 0.1px;
+  font-weight: 600;
+  display: none;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+
+/* NFTShower Component Styling */
+
+.mainNFTShowerDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.subNFTShowerDiv {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  width: 50%;
+  margin-top: 8rem;
+  column-gap: 2rem;
+  row-gap: 4rem;
+}
+
+.nftImageShower {
+  width: 40rem;
+  height: 40rem;
+  background-color: #303339;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nftImageShower img {
+  width: 100%;
+}
+
+.nftInfoShower {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(229, 232, 235);
+  font-size: 1.2rem;
+  letter-spacing: 0.1px;
+  font-weight: 600;
+}
+
+.nftIdShower_NFT {
+  font-size: 2rem;
+  color: rgb(138, 147, 155);
+}
+
+.nftNameShower_NFT {
+  margin-top: 2rem;
+  font-size: 2.5rem;
+}
+
+.ownerAddressShower_NFT {
+  margin-top: 1rem;
+  color: rgb(138, 147, 155);
+}
+
+.ownerAddressShower_NFT span {
+  color: rgb(32, 129, 226);
+  cursor: pointer;
+}
+
+.ownerAddressShower_NFT span:hover {
+  text-decoration: underline;
+}
+
+.showBuyOption_NFT {
+  background-color: #303339;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.priceText_NFT {
+  color: rgb(138, 147, 155);
+  font-size: 1.5rem;
+}
+
+.priceShower_NFT {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  margin: 1rem 1rem 0rem 0.5rem;
+}
+
+.buyNFTButton_NFT {
+  background-color: rgb(32, 129, 226);
+  border-radius: 1rem;
+  width: fit-content;
+  padding: 1rem 6rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-top: 2.5rem;
+  transition: all 0.2s;
+}
+
+.buyNFTButton_NFT:hover {
+  background-color: rgb(24 108 192);
+}
+
+.notForSaleMessShower {
+  font-size: 2.2rem;
+}
+
+.nftFeature {
+  border: 1px solid rgb(21, 178, 229);
+  padding: 1.5rem 2.5rem;
+  border-radius: 0.5rem;
+  color: rgb(21, 178, 229);
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nftFeaturesShower {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 2rem;
+  background-color: #303339;
+  border-radius: 1rem;
+  padding: 1rem; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column: 1/3;
+  gap: 2rem 2rem;
+  background-color: #303339;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 65%;
+  margin-bottom: 8rem;
+}
+
+.nftFeatureData {
+  letter-spacing: 0.1px;
+  font-weight: 600;
+  color: rgb(138, 147, 155);
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+
+
+/* Loading Component Styling */
+
+.mainLoader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0%;
+  background-color: #1f1b2dc4;
+  z-index: 1;
+}
+
+.subLoader {
+  color: white;
+  font-size: 4rem;
+  font-family: 'Mulish', sans-serif;
+  background-color: #9799d1;
+  padding: 0.5rem 1.5rem;
+  border-radius: 100%;
+}
+
+.animatorDiv {
+  height: 0.8rem;
+  width: 0.8rem;
+  background-color: #362e52;
+  position: relative;
+  animation: moveLoader 2s infinite;
+  animation-timing-function: ease-in-out;
+  left: -43px;
+  top: -12px;
+  border-radius: 50%;
+}
+
+.loaderText {
+  font-family: 'Mulish', sans-serif;
+}
+
+@keyframes moveLoader {
+  0% {
+    left: -43px;
+    top: -12px;
+  }
+
+  25% {
+    left: -35.5px;
+    top: 12px;
+  }
+
+  50% {
+    left: -19.2px;
+    top: -12px;
+  }
+
+  75% {
+    left: -35.5px;
+    top: 12px;
+  }
+
+  100% {
+    left: -43px;
+    top: -12px;
+  }
+}
+
+
+/* Error 404 Error Page Styling*/
+
+.div1 {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.subMainDivError404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.div2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.err1 {
+  font-size: 8rem;
+  font-family: "Archivo Black", sans-serif;
+}
+
+.err1 h1 {
+  margin: 0%;
+  background: -webkit-linear-gradient(#eee, #3f8bf1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.message1 {
+  font-family: 'Staatliches', cursive;
+  letter-spacing: 0.2rem;
+  color: #535765;
+  font-size: 2rem;
+}
+
+.op40 h1 {
+  position: relative;
+  animation: mova1 1s infinite;
+}
+
+@keyframes mova1 {
+  from {
+    left: -1rem;
+  }
+
+  to {
+    left: auto;
+  }
+}
+
+.op41 h1 {
+  position: relative;
+  animation: mova11 0.5s infinite;
+}
+
+@keyframes mova11 {
+  from {
+    left: -1rem;
+  }
+
+  to {
+    left: auto;
+  }
+}
+
+.op42 h1 {
+  position: relative;
+  animation: mova111 0.8s infinite;
+}
+
+@keyframes mova111 {
+  from {
+    left: -1rem;
+  }
+
+  to {
+    left: auto;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Media Queries */
+
+
+@media only screen and (max-width: 1750px) {
+  .ownedNFTShower {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1650px) {
+  .subNFTShowerDiv {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 1360px) {
+  .subDashboardDiv {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .subNFTShowerDiv {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .searchBar {
+    width: 85%;
+  }
+
+  .searchBarInp {
+    width: 100%;
+  }
+
+  .subHeaderDiv {
+    display: grid;
+    grid-template-columns: 1.5fr 4fr 1fr;
+  }
+
+}
+
+@media only screen and (max-width: 1050px) {
+  .subNFTShowerDiv {
+    width: 95%;
+    grid-template-columns: repeat(auto-fill, 40rem);
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .headingText {
+    margin-left: 0rem;
+  }
+
+  .subHeaderDiv {
+    display: grid;
+    grid-template-columns: 2fr 4fr 1fr;
+  }
+
+  .nftFeaturesShower {
+    grid-column: auto;
+    width: 95%;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .subHeaderDiv {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .nftImageShower {
+    width: 35rem;
+    height: 35rem;
+    justify-self: center;
+  }
+
+  .subNFTShowerDiv {
+    width: 95%;
+    grid-template-columns: repeat(auto-fill, 35rem);
+    justify-content: center;
+  }
+
+  .userAccount {
+    font-size: 1.5rem;
+    margin-left: 0rem;
+    margin-right: 0;
+  }
+
+  .userAddressShower {
+    font-size: 1.2rem;
+  }
+}
+
+.stickmanLogoImg {
+  width: 4.2rem;
+}
